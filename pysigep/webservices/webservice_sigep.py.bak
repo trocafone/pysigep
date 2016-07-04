@@ -25,17 +25,31 @@
 #
 ###############################################################################
 
-import xml.etree.cElementTree as Et
-
-from .webservice_base import WebserviceBase
+from webservice_base import WebserviceBase
 
 
-class WebserviceRastreamento(WebserviceBase):
+class WebserviceSIGEP(WebserviceBase):
+    AMBIENTE_PRODUCAO = 'PRODUCAO'
+    AMBIENTE_HOMOLOGACAO = 'HOMOLOGACAO'
 
-    def __init__(self):
-        super(WebserviceRastreamento, self).__init__(
-            'http://websro.correios.com.br/sro_bin/sroii_xml.eventos')
+    def __init__(self, ambiente):
 
-    def parse_error(self, xml):
-        # Necessario pois o decode do rastreamento é diferente
-        return xml.decode('utf8').encode('iso-8859-1')
+        amb = {
+            WebserviceSIGEP.AMBIENTE_HOMOLOGACAO:
+                'https://apphom.correios.com.br/SigepMasterJPA/'
+                'AtendeClienteService/AtendeCliente?wsdl',
+
+            WebserviceSIGEP.AMBIENTE_PRODUCAO:
+                'https://apps.correios.com.br/SigepMasterJPA/'
+                'AtendeClienteService/AtendeCliente?wsdl'
+        }
+
+        try:
+            super(WebserviceSIGEP, self).__init__(amb[ambiente])
+        except KeyError as exp:
+            print exp.message
+            super(WebserviceSIGEP, self).__init__(
+                amb[WebserviceSIGEP.AMBIENTE_HOMOLOGACAO])
+            ambiente = WebserviceSIGEP.AMBIENTE_HOMOLOGACAO
+
+        self.ambiente = ambiente

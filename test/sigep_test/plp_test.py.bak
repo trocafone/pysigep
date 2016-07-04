@@ -60,7 +60,7 @@ class TestXmlPLP(TestCase):
 
         obj_post.nacional.bairro.valor = 'Setor Industrial'
         obj_post.nacional.cep.valor = '74000100'
-        obj_post.nacional.cidade.valor = 'Goiânia'
+        obj_post.nacional.cidade.valor = u'Goiânia'
         obj_post.nacional.uf.valor = 'GO'
         obj_post.nacional.numero_nfe.valor = '102030'
         obj_post.nacional.valor_a_cobrar.valor = 0.0
@@ -84,116 +84,116 @@ class TestXmlPLP(TestCase):
         tag.remetente.numero_contrato.valor = '0123456789'
         tag.remetente.numero_diretoria.valor = 36
         tag.remetente.codigo_administrativo.valor = '12345678'
-        tag.remetente.nome.valor = 'Empresa Ltda'
-        tag.remetente.logradouro.valor = 'Avenida Central'
+        tag.remetente.nome.valor = u'Empresa Ltda'
+        tag.remetente.logradouro.valor = u'Avenida Central'
         tag.remetente.numero.valor = '2370'
-        tag.remetente.complemento.valor = 'sala 1205,12° andar'
+        tag.remetente.complemento.valor = u'sala 1205,12° andar'
         tag.remetente.bairro.valor = 'Centro'
         tag.remetente.cep.valor = '70002900'
-        tag.remetente.cidade.valor = 'Brasília'
+        tag.remetente.cidade.valor = u'Brasília'
         tag.remetente.uf.valor = 'PR'
         tag.remetente.telefone.valor = '6112345008'
         tag.remetente.email.valor = 'cli@mail.com.br'
 
         tag.lista_objeto_postal.append(obj_post)
 
-        xml = '<?xml version=\"1.0\" encoding=\"UTF-8\" ?>'
-        xml += '<correioslog>'
-        xml += '<tipo_arquivo>Postagem</tipo_arquivo>'
-        xml += '<versao_arquivo>2.3</versao_arquivo>'
+        xml = u'<?xml version=\"1.0\" encoding=\"UTF-8\" ?>'
+        xml += u'<correioslog>'
+        xml += u'<tipo_arquivo>Postagem</tipo_arquivo>'
+        xml += u'<versao_arquivo>2.3</versao_arquivo>'
 
-        xml += '<plp>'
-        xml += '<id_plp></id_plp>'
-        xml += '<valor_global></valor_global>'
-        xml += '<mcu_unidade_postagem></mcu_unidade_postagem>'
-        xml += '<nome_unidade_postagem></nome_unidade_postagem>'
-        xml += '<cartao_postagem>0123456789</cartao_postagem>'
-        xml += '</plp>'
+        xml += u'<plp>'
+        xml += u'<id_plp></id_plp>'
+        xml += u'<valor_global></valor_global>'
+        xml += u'<mcu_unidade_postagem></mcu_unidade_postagem>'
+        xml += u'<nome_unidade_postagem></nome_unidade_postagem>'
+        xml += u'<cartao_postagem>0123456789</cartao_postagem>'
+        xml += u'</plp>'
 
-        xml += '<remetente>'
-        xml += '<numero_contrato>0123456789</numero_contrato>'
-        xml += '<numero_diretoria>36</numero_diretoria>'
-        xml += '<codigo_administrativo>12345678</codigo_administrativo>'
-        xml += '<nome_remetente><![CDATA[Empresa Ltda]]></nome_remetente>'
-        xml += '<logradouro_remetente><![CDATA[Avenida Central]]>' \
-               '</logradouro_remetente>'
-        xml += '<numero_remetente>2370</numero_remetente>'
-        xml += '<complemento_remetente><![CDATA[sala 1205,12° andar]]>' \
-               '</complemento_remetente>'
-        xml += '<bairro_remetente><![CDATA[Centro]]></bairro_remetente>'
-        xml += '<cep_remetente>70002900</cep_remetente>'
-        xml += '<cidade_remetente><![CDATA[Brasília]]></cidade_remetente>'
-        xml += '<uf_remetente>PR</uf_remetente>'
-        xml += '<telefone_remetente>6112345008</telefone_remetente>'
-        xml += '<fax_remetente></fax_remetente>'
-        xml += '<email_remetente><![CDATA[cli@mail.com.br]]>' \
-               '</email_remetente>'
-        xml += '</remetente>'
+        xml += u'<remetente>'
+        xml += u'<numero_contrato>0123456789</numero_contrato>'
+        xml += u'<numero_diretoria>36</numero_diretoria>'
+        xml += u'<codigo_administrativo>12345678</codigo_administrativo>'
+        xml += u'<nome_remetente><![CDATA[Empresa Ltda]]></nome_remetente>'
+        xml += u'<logradouro_remetente><![CDATA[Avenida Central]]>' \
+               u'</logradouro_remetente>'
+        xml += u'<numero_remetente>2370</numero_remetente>'
+        xml += u'<complemento_remetente><![CDATA[sala 1205,12° andar]]>' \
+               u'</complemento_remetente>'
+        xml += u'<bairro_remetente><![CDATA[Centro]]></bairro_remetente>'
+        xml += u'<cep_remetente>70002900</cep_remetente>'
+        xml += u'<cidade_remetente><![CDATA[Brasília]]></cidade_remetente>'
+        xml += u'<uf_remetente>PR</uf_remetente>'
+        xml += u'<telefone_remetente>6112345008</telefone_remetente>'
+        xml += u'<fax_remetente></fax_remetente>'
+        xml += u'<email_remetente><![CDATA[cli@mail.com.br]]>' \
+               u'</email_remetente>'
+        xml += u'</remetente>'
 
-        xml += '<forma_pagamento></forma_pagamento>'
+        xml += u'<forma_pagamento></forma_pagamento>'
 
-        xml += '<objeto_postal>'
+        xml += u'<objeto_postal>'
 
-        xml += '<numero_etiqueta>PH185560916BR</numero_etiqueta>'
-        xml += '<codigo_objeto_cliente></codigo_objeto_cliente>'
-        xml += '<codigo_servico_postagem>41068</codigo_servico_postagem>'
-        xml += '<cubagem>0.0</cubagem>'
-        xml += '<peso>200</peso>'
-        xml += '<rt1></rt1>'
-        xml += '<rt2></rt2>'
+        xml += u'<numero_etiqueta>PH185560916BR</numero_etiqueta>'
+        xml += u'<codigo_objeto_cliente></codigo_objeto_cliente>'
+        xml += u'<codigo_servico_postagem>41068</codigo_servico_postagem>'
+        xml += u'<cubagem>0.0</cubagem>'
+        xml += u'<peso>200</peso>'
+        xml += u'<rt1></rt1>'
+        xml += u'<rt2></rt2>'
 
-        xml += '<destinatario>'
-        xml += '<nome_destinatario><![CDATA[Destino Ltda]]>' \
-               '</nome_destinatario>'
-        xml += '<telefone_destinatario>6212349644</telefone_destinatario>'
-        xml += '<celular_destinatario></celular_destinatario>'
-        xml += '<email_destinatario></email_destinatario>'
-        xml += '<logradouro_destinatario><![CDATA[Avenida Central]]>' \
-               '</logradouro_destinatario>'
-        xml += '<complemento_destinatario><![CDATA[Qd: 102 A Lt: 04]]>' \
-               '</complemento_destinatario>'
-        xml += '<numero_end_destinatario>1065</numero_end_destinatario>'
-        xml += '</destinatario>'
+        xml += u'<destinatario>'
+        xml += u'<nome_destinatario><![CDATA[Destino Ltda]]>' \
+               u'</nome_destinatario>'
+        xml += u'<telefone_destinatario>6212349644</telefone_destinatario>'
+        xml += u'<celular_destinatario></celular_destinatario>'
+        xml += u'<email_destinatario></email_destinatario>'
+        xml += u'<logradouro_destinatario><![CDATA[Avenida Central]]>' \
+               u'</logradouro_destinatario>'
+        xml += u'<complemento_destinatario><![CDATA[Qd: 102 A Lt: 04]]>' \
+               u'</complemento_destinatario>'
+        xml += u'<numero_end_destinatario>1065</numero_end_destinatario>'
+        xml += u'</destinatario>'
 
-        xml += '<nacional>'
-        xml += '<bairro_destinatario><![CDATA[Setor Industrial]]>' \
-               '</bairro_destinatario>'
-        xml += '<cidade_destinatario><![CDATA[Goiânia]]>' \
-               '</cidade_destinatario>'
-        xml += '<uf_destinatario>GO</uf_destinatario>'
-        xml += '<cep_destinatario>74000100</cep_destinatario>'
-        xml += '<codigo_usuario_postal></codigo_usuario_postal>'
-        xml += '<centro_custo_cliente></centro_custo_cliente>'
-        xml += '<numero_nota_fiscal>102030</numero_nota_fiscal>'
-        xml += '<serie_nota_fiscal></serie_nota_fiscal>'
-        xml += '<valor_nota_fiscal></valor_nota_fiscal>'
-        xml += '<natureza_nota_fiscal></natureza_nota_fiscal>'
-        xml += '<descricao_objeto><![CDATA[]]></descricao_objeto>'
-        xml += '<valor_a_cobrar>0.0</valor_a_cobrar>'
-        xml += '</nacional>'
+        xml += u'<nacional>'
+        xml += u'<bairro_destinatario><![CDATA[Setor Industrial]]>' \
+               u'</bairro_destinatario>'
+        xml += u'<cidade_destinatario><![CDATA[Goiânia]]>' \
+               u'</cidade_destinatario>'
+        xml += u'<uf_destinatario>GO</uf_destinatario>'
+        xml += u'<cep_destinatario>74000100</cep_destinatario>'
+        xml += u'<codigo_usuario_postal></codigo_usuario_postal>'
+        xml += u'<centro_custo_cliente></centro_custo_cliente>'
+        xml += u'<numero_nota_fiscal>102030</numero_nota_fiscal>'
+        xml += u'<serie_nota_fiscal></serie_nota_fiscal>'
+        xml += u'<valor_nota_fiscal></valor_nota_fiscal>'
+        xml += u'<natureza_nota_fiscal></natureza_nota_fiscal>'
+        xml += u'<descricao_objeto><![CDATA[]]></descricao_objeto>'
+        xml += u'<valor_a_cobrar>0.0</valor_a_cobrar>'
+        xml += u'</nacional>'
 
         # O servico adicional 025 sempre deverá ser informado.
-        xml += '<servico_adicional>'
-        xml += '<codigo_servico_adicional>025</codigo_servico_adicional>'
-        xml += '<codigo_servico_adicional>001</codigo_servico_adicional>'
-        xml += '<codigo_servico_adicional>019</codigo_servico_adicional>'
-        xml += '<valor_declarado>99.0</valor_declarado>'
-        xml += '</servico_adicional>'
+        xml += u'<servico_adicional>'
+        xml += u'<codigo_servico_adicional>025</codigo_servico_adicional>'
+        xml += u'<codigo_servico_adicional>001</codigo_servico_adicional>'
+        xml += u'<codigo_servico_adicional>019</codigo_servico_adicional>'
+        xml += u'<valor_declarado>99.0</valor_declarado>'
+        xml += u'</servico_adicional>'
 
-        xml += '<dimensao_objeto>'
-        xml += '<tipo_objeto>002</tipo_objeto>'
-        xml += '<dimensao_altura>20</dimensao_altura>'
-        xml += '<dimensao_largura>30</dimensao_largura>'
-        xml += '<dimensao_comprimento>38</dimensao_comprimento>'
-        xml += '<dimensao_diametro>0</dimensao_diametro>'
-        xml += '</dimensao_objeto>'
+        xml += u'<dimensao_objeto>'
+        xml += u'<tipo_objeto>002</tipo_objeto>'
+        xml += u'<dimensao_altura>20</dimensao_altura>'
+        xml += u'<dimensao_largura>30</dimensao_largura>'
+        xml += u'<dimensao_comprimento>38</dimensao_comprimento>'
+        xml += u'<dimensao_diametro>0</dimensao_diametro>'
+        xml += u'</dimensao_objeto>'
 
-        xml += '<data_postagem_sara></data_postagem_sara>'
-        xml += '<status_processamento>0</status_processamento>'
-        xml += '<numero_comprovante_postagem></numero_comprovante_postagem>'
-        xml += '<valor_cobrado></valor_cobrado>'
-        xml += '</objeto_postal>'
-        xml += '</correioslog>'
+        xml += u'<data_postagem_sara></data_postagem_sara>'
+        xml += u'<status_processamento>0</status_processamento>'
+        xml += u'<numero_comprovante_postagem></numero_comprovante_postagem>'
+        xml += u'<valor_cobrado></valor_cobrado>'
+        xml += u'</objeto_postal>'
+        xml += u'</correioslog>'
 
         self.assertEqual(xml, tag.get_xml())
 
@@ -221,37 +221,37 @@ class TestTagRemetente(TestCase):
     def test_get_xml(self):
 
         self.maxDiff = None
-        xml = '<remetente>'
-        xml += '<numero_contrato>0123456789</numero_contrato>'
-        xml += '<numero_diretoria>36</numero_diretoria>'
-        xml += '<codigo_administrativo>12345678</codigo_administrativo>'
-        xml += '<nome_remetente><![CDATA[Empresa Ltda]]></nome_remetente>'
-        xml += '<logradouro_remetente><![CDATA[Avenida Central]]>' \
-               '</logradouro_remetente>'
-        xml += '<numero_remetente>2370</numero_remetente>'
-        xml += '<complemento_remetente><![CDATA[sala 1205,12° andar]]>' \
-               '</complemento_remetente>'
-        xml += '<bairro_remetente><![CDATA[Centro]]></bairro_remetente>'
-        xml += '<cep_remetente>70002900</cep_remetente>'
-        xml += '<cidade_remetente><![CDATA[Brasília]]></cidade_remetente>'
-        xml += '<uf_remetente>PR</uf_remetente>'
-        xml += '<telefone_remetente>6112345008</telefone_remetente>'
-        xml += '<fax_remetente></fax_remetente>'
-        xml += '<email_remetente><![CDATA[cli@mail.com.br]]>' \
-               '</email_remetente>'
-        xml += '</remetente>'
+        xml = u'<remetente>'
+        xml += u'<numero_contrato>0123456789</numero_contrato>'
+        xml += u'<numero_diretoria>36</numero_diretoria>'
+        xml += u'<codigo_administrativo>12345678</codigo_administrativo>'
+        xml += u'<nome_remetente><![CDATA[Empresa Ltda]]></nome_remetente>'
+        xml += u'<logradouro_remetente><![CDATA[Avenida Central]]>' \
+               u'</logradouro_remetente>'
+        xml += u'<numero_remetente>2370</numero_remetente>'
+        xml += u'<complemento_remetente><![CDATA[sala 1205,12° andar]]>' \
+               u'</complemento_remetente>'
+        xml += u'<bairro_remetente><![CDATA[Centro]]></bairro_remetente>'
+        xml += u'<cep_remetente>70002900</cep_remetente>'
+        xml += u'<cidade_remetente><![CDATA[Brasília]]></cidade_remetente>'
+        xml += u'<uf_remetente>PR</uf_remetente>'
+        xml += u'<telefone_remetente>6112345008</telefone_remetente>'
+        xml += u'<fax_remetente></fax_remetente>'
+        xml += u'<email_remetente><![CDATA[cli@mail.com.br]]>' \
+               u'</email_remetente>'
+        xml += u'</remetente>'
 
         tag = TagRemetente()
         tag.numero_contrato.valor = '0123456789'
         tag.numero_diretoria.valor = 36
         tag.codigo_administrativo.valor = '12345678'
-        tag.nome.valor = 'Empresa Ltda'
-        tag.logradouro.valor = 'Avenida Central'
+        tag.nome.valor = u'Empresa Ltda'
+        tag.logradouro.valor = u'Avenida Central'
         tag.numero.valor = '2370'
-        tag.complemento.valor = 'sala 1205,12° andar'
+        tag.complemento.valor = u'sala 1205,12° andar'
         tag.bairro.valor = 'Centro'
         tag.cep.valor = '70002900'
-        tag.cidade.valor = 'Brasília'
+        tag.cidade.valor = u'Brasília'
         tag.uf.valor = 'PR'
         tag.telefone.valor = '6112345008'
         tag.email.valor = 'cli@mail.com.br'
@@ -279,7 +279,7 @@ class TestTagObjetoPostal(TestCase):
 
         tag.nacional.bairro.valor = 'Setor Industrial'
         tag.nacional.cep.valor = '74000100'
-        tag.nacional.cidade.valor = 'Goiânia'
+        tag.nacional.cidade.valor = u'Goiânia'
         tag.nacional.uf.valor = 'GO'
         tag.nacional.numero_nfe.valor = '102030'
         tag.nacional.valor_a_cobrar.valor = 0.0
@@ -296,67 +296,67 @@ class TestTagObjetoPostal(TestCase):
 
         tag.status_processamento.valor = '0'
 
-        xml = '<objeto_postal>'
+        xml = u'<objeto_postal>'
 
-        xml += '<numero_etiqueta>PH185560916BR</numero_etiqueta>'
-        xml += '<codigo_objeto_cliente></codigo_objeto_cliente>'
-        xml += '<codigo_servico_postagem>41068</codigo_servico_postagem>'
-        xml += '<cubagem>0.0</cubagem>'
-        xml += '<peso>200</peso>'
-        xml += '<rt1></rt1>'
-        xml += '<rt2></rt2>'
+        xml += u'<numero_etiqueta>PH185560916BR</numero_etiqueta>'
+        xml += u'<codigo_objeto_cliente></codigo_objeto_cliente>'
+        xml += u'<codigo_servico_postagem>41068</codigo_servico_postagem>'
+        xml += u'<cubagem>0.0</cubagem>'
+        xml += u'<peso>200</peso>'
+        xml += u'<rt1></rt1>'
+        xml += u'<rt2></rt2>'
 
-        xml += '<destinatario>'
-        xml += '<nome_destinatario><![CDATA[Destino Ltda]]>' \
-               '</nome_destinatario>'
-        xml += '<telefone_destinatario>6212349644</telefone_destinatario>'
-        xml += '<celular_destinatario></celular_destinatario>'
-        xml += '<email_destinatario></email_destinatario>'
-        xml += '<logradouro_destinatario><![CDATA[Avenida Central]]>' \
-               '</logradouro_destinatario>'
-        xml += '<complemento_destinatario><![CDATA[Qd: 102 A Lt: 04]]>' \
-               '</complemento_destinatario>'
-        xml += '<numero_end_destinatario>1065</numero_end_destinatario>'
-        xml += '</destinatario>'
+        xml += u'<destinatario>'
+        xml += u'<nome_destinatario><![CDATA[Destino Ltda]]>' \
+               u'</nome_destinatario>'
+        xml += u'<telefone_destinatario>6212349644</telefone_destinatario>'
+        xml += u'<celular_destinatario></celular_destinatario>'
+        xml += u'<email_destinatario></email_destinatario>'
+        xml += u'<logradouro_destinatario><![CDATA[Avenida Central]]>' \
+               u'</logradouro_destinatario>'
+        xml += u'<complemento_destinatario><![CDATA[Qd: 102 A Lt: 04]]>' \
+               u'</complemento_destinatario>'
+        xml += u'<numero_end_destinatario>1065</numero_end_destinatario>'
+        xml += u'</destinatario>'
 
-        xml += '<nacional>'
-        xml += '<bairro_destinatario><![CDATA[Setor Industrial]]>' \
-               '</bairro_destinatario>'
-        xml += '<cidade_destinatario><![CDATA[Goiânia]]>' \
-               '</cidade_destinatario>'
-        xml += '<uf_destinatario>GO</uf_destinatario>'
-        xml += '<cep_destinatario>74000100</cep_destinatario>'
-        xml += '<codigo_usuario_postal></codigo_usuario_postal>'
-        xml += '<centro_custo_cliente></centro_custo_cliente>'
-        xml += '<numero_nota_fiscal>102030</numero_nota_fiscal>'
-        xml += '<serie_nota_fiscal></serie_nota_fiscal>'
-        xml += '<valor_nota_fiscal></valor_nota_fiscal>'
-        xml += '<natureza_nota_fiscal></natureza_nota_fiscal>'
-        xml += '<descricao_objeto><![CDATA[]]></descricao_objeto>'
-        xml += '<valor_a_cobrar>0.0</valor_a_cobrar>'
-        xml += '</nacional>'
+        xml += u'<nacional>'
+        xml += u'<bairro_destinatario><![CDATA[Setor Industrial]]>' \
+               u'</bairro_destinatario>'
+        xml += u'<cidade_destinatario><![CDATA[Goiânia]]>' \
+               u'</cidade_destinatario>'
+        xml += u'<uf_destinatario>GO</uf_destinatario>'
+        xml += u'<cep_destinatario>74000100</cep_destinatario>'
+        xml += u'<codigo_usuario_postal></codigo_usuario_postal>'
+        xml += u'<centro_custo_cliente></centro_custo_cliente>'
+        xml += u'<numero_nota_fiscal>102030</numero_nota_fiscal>'
+        xml += u'<serie_nota_fiscal></serie_nota_fiscal>'
+        xml += u'<valor_nota_fiscal></valor_nota_fiscal>'
+        xml += u'<natureza_nota_fiscal></natureza_nota_fiscal>'
+        xml += u'<descricao_objeto><![CDATA[]]></descricao_objeto>'
+        xml += u'<valor_a_cobrar>0.0</valor_a_cobrar>'
+        xml += u'</nacional>'
 
         # O servico adicional 025 sempre deverá ser informado.
-        xml += '<servico_adicional>'
-        xml += '<codigo_servico_adicional>025</codigo_servico_adicional>'
-        xml += '<codigo_servico_adicional>001</codigo_servico_adicional>'
-        xml += '<codigo_servico_adicional>019</codigo_servico_adicional>'
-        xml += '<valor_declarado>99.0</valor_declarado>'
-        xml += '</servico_adicional>'
+        xml += u'<servico_adicional>'
+        xml += u'<codigo_servico_adicional>025</codigo_servico_adicional>'
+        xml += u'<codigo_servico_adicional>001</codigo_servico_adicional>'
+        xml += u'<codigo_servico_adicional>019</codigo_servico_adicional>'
+        xml += u'<valor_declarado>99.0</valor_declarado>'
+        xml += u'</servico_adicional>'
 
-        xml += '<dimensao_objeto>'
-        xml += '<tipo_objeto>002</tipo_objeto>'
-        xml += '<dimensao_altura>20</dimensao_altura>'
-        xml += '<dimensao_largura>30</dimensao_largura>'
-        xml += '<dimensao_comprimento>38</dimensao_comprimento>'
-        xml += '<dimensao_diametro>0</dimensao_diametro>'
-        xml += '</dimensao_objeto>'
+        xml += u'<dimensao_objeto>'
+        xml += u'<tipo_objeto>002</tipo_objeto>'
+        xml += u'<dimensao_altura>20</dimensao_altura>'
+        xml += u'<dimensao_largura>30</dimensao_largura>'
+        xml += u'<dimensao_comprimento>38</dimensao_comprimento>'
+        xml += u'<dimensao_diametro>0</dimensao_diametro>'
+        xml += u'</dimensao_objeto>'
 
-        xml += '<data_postagem_sara></data_postagem_sara>'
-        xml += '<status_processamento>0</status_processamento>'
-        xml += '<numero_comprovante_postagem></numero_comprovante_postagem>'
-        xml += '<valor_cobrado></valor_cobrado>'
-        xml += '</objeto_postal>'
+        xml += u'<data_postagem_sara></data_postagem_sara>'
+        xml += u'<status_processamento>0</status_processamento>'
+        xml += u'<numero_comprovante_postagem></numero_comprovante_postagem>'
+        xml += u'<valor_cobrado></valor_cobrado>'
+        xml += u'</objeto_postal>'
 
         self.assertEqual(xml, tag.get_xml())
 
@@ -367,20 +367,20 @@ class TestTagDestinatario(TestCase):
 
         self.maxDiff = None
 
-        xml = '<destinatario>'
-        xml += '<nome_destinatario><![CDATA[João]]></nome_destinatario>'
-        xml += '<telefone_destinatario>353136232888</telefone_destinatario>'
-        xml += '<celular_destinatario>003591419415</celular_destinatario>'
-        xml += '<email_destinatario></email_destinatario>'
-        xml += '<logradouro_destinatario><![CDATA[Rua Geraldino Campista]]>' \
-               '</logradouro_destinatario>'
-        xml += '<complemento_destinatario><![CDATA[]]>' \
-               '</complemento_destinatario>'
-        xml += '<numero_end_destinatario>123</numero_end_destinatario>'
-        xml += '</destinatario>'
+        xml = u'<destinatario>'
+        xml += u'<nome_destinatario><![CDATA[João]]></nome_destinatario>'
+        xml += u'<telefone_destinatario>353136232888</telefone_destinatario>'
+        xml += u'<celular_destinatario>003591419415</celular_destinatario>'
+        xml += u'<email_destinatario></email_destinatario>'
+        xml += u'<logradouro_destinatario><![CDATA[Rua Geraldino Campista]]>' \
+               u'</logradouro_destinatario>'
+        xml += u'<complemento_destinatario><![CDATA[]]>' \
+               u'</complemento_destinatario>'
+        xml += u'<numero_end_destinatario>123</numero_end_destinatario>'
+        xml += u'</destinatario>'
 
         tag = TagDestinatario()
-        tag.nome.valor = 'João'
+        tag.nome.valor = u'João'
         tag.logradouro.valor = 'Rua Geraldino Campista'
         tag.numero.valor = '123'
         tag.telefone.valor = '353136232888'
@@ -395,27 +395,27 @@ class TestTagNacional(TestCase):
 
         self.maxDiff = None
 
-        xml = '<nacional>'
-        xml += '<bairro_destinatario><![CDATA[Vila Poddis]]>' \
-               '</bairro_destinatario>'
-        xml += '<cidade_destinatario><![CDATA[Itajubá]]>' \
-               '</cidade_destinatario>'
-        xml += '<uf_destinatario>MG</uf_destinatario>'
-        xml += '<cep_destinatario>37503003</cep_destinatario>'
-        xml += '<codigo_usuario_postal></codigo_usuario_postal>'
-        xml += '<centro_custo_cliente></centro_custo_cliente>'
-        xml += '<numero_nota_fiscal>112</numero_nota_fiscal>'
-        xml += '<serie_nota_fiscal>1</serie_nota_fiscal>'
-        xml += '<valor_nota_fiscal></valor_nota_fiscal>'
-        xml += '<natureza_nota_fiscal></natureza_nota_fiscal>'
-        xml += '<descricao_objeto><![CDATA[]]></descricao_objeto>'
-        xml += '<valor_a_cobrar>0.0</valor_a_cobrar>'
-        xml += '</nacional>'
+        xml = u'<nacional>'
+        xml += u'<bairro_destinatario><![CDATA[Vila Poddis]]>' \
+               u'</bairro_destinatario>'
+        xml += u'<cidade_destinatario><![CDATA[Itajubá]]>' \
+               u'</cidade_destinatario>'
+        xml += u'<uf_destinatario>MG</uf_destinatario>'
+        xml += u'<cep_destinatario>37503003</cep_destinatario>'
+        xml += u'<codigo_usuario_postal></codigo_usuario_postal>'
+        xml += u'<centro_custo_cliente></centro_custo_cliente>'
+        xml += u'<numero_nota_fiscal>112</numero_nota_fiscal>'
+        xml += u'<serie_nota_fiscal>1</serie_nota_fiscal>'
+        xml += u'<valor_nota_fiscal></valor_nota_fiscal>'
+        xml += u'<natureza_nota_fiscal></natureza_nota_fiscal>'
+        xml += u'<descricao_objeto><![CDATA[]]></descricao_objeto>'
+        xml += u'<valor_a_cobrar>0.0</valor_a_cobrar>'
+        xml += u'</nacional>'
 
         tag_nac = TagNacional('41068')
         tag_nac.bairro.valor = 'Vila Poddis'
         tag_nac.cep.valor = '37503003'
-        tag_nac.cidade.valor = 'Itajubá'
+        tag_nac.cidade.valor = u'Itajubá'
         tag_nac.uf.valor = 'MG'
         tag_nac.numero_nfe.valor = '112'
         tag_nac.serie_nfe.valor = '1'

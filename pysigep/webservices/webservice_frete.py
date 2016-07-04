@@ -25,7 +25,7 @@
 #
 ###############################################################################
 
-from webservice_base import WebserviceBase
+from .webservice_base import WebserviceBase
 
 
 class WebserviceFrete(WebserviceBase):

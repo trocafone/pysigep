@@ -25,17 +25,11 @@
 #
 ###############################################################################
 
-import xml.etree.cElementTree as Et
-
-from .webservice_base import WebserviceBase
+from webservice_base import WebserviceBase
 
 
-class WebserviceRastreamento(WebserviceBase):
+class WebserviceFrete(WebserviceBase):
 
     def __init__(self):
-        super(WebserviceRastreamento, self).__init__(
-            'http://websro.correios.com.br/sro_bin/sroii_xml.eventos')
-
-    def parse_error(self, xml):
-        # Necessario pois o decode do rastreamento é diferente
-        return xml.decode('utf8').encode('iso-8859-1')
+        super(WebserviceFrete, self).__init__(
+            'http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?WSDL')

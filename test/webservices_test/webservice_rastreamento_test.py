@@ -46,6 +46,6 @@ class TestWebserviceRastreamento(TestCase):
         try:
             self.assertIsInstance(server.request(req), ResponseRastreamento)
         except ErroValidacaoXML as exc:
-            print exc.message
+            print(exc.message)
         except ErroConexaoComServidor as exc:
-            print exc.message
+            print(exc.message)
