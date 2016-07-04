@@ -47,7 +47,7 @@ class WebserviceSIGEP(WebserviceBase):
         try:
             super(WebserviceSIGEP, self).__init__(amb[ambiente])
         except KeyError as exp:
-            print(exp.message)
+            print(exp)
             super(WebserviceSIGEP, self).__init__(
                 amb[WebserviceSIGEP.AMBIENTE_HOMOLOGACAO])
             ambiente = WebserviceSIGEP.AMBIENTE_HOMOLOGACAO
