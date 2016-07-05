@@ -75,7 +75,7 @@ class TestCampoString(TestCase):
 class TestCampoUnicode(TestCase):
 
     def test_get_xml(self):
-        campo_unicode = CampoUnicode('nome_remetente', valor=u'Empresa Ltda')
+        campo_unicode = CampoUnicode('nome_remetente', valor='Empresa Ltda')
         self.assertEqual(campo_unicode.get_xml(), '<nome_remetente>'
                                                   '<![CDATA[Empresa Ltda]]>'
                                                   '</nome_remetente>')

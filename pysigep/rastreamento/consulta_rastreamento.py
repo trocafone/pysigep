@@ -74,9 +74,8 @@ class ResponseRastreamento(ResponseBase):
         super(ResponseRastreamento, self).__init__()
 
     def _parse_xml(self, xml):
-
         # Necessario pois o decode do rastreamento é diferente
-        xml = xml.decode('utf8').encode('iso-8859-1')
+        xml = bytes(xml, 'iso-8859-1').decode('iso-8859-1')
 
         self.resposta = {}
         for end in Et.fromstring(xml).findall('.'):

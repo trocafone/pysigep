@@ -54,7 +54,7 @@ class TestRequestFechaPLPVariosServicos(TestCase):
 
         obj_post.nacional.bairro.valor = 'Setor Industrial'
         obj_post.nacional.cep.valor = '74000100'
-        obj_post.nacional.cidade.valor = u'Goiânia'
+        obj_post.nacional.cidade.valor = 'Goiânia'
         obj_post.nacional.uf.valor = 'GO'
         obj_post.nacional.numero_nfe.valor = '102030'
         obj_post.nacional.valor_a_cobrar.valor = 0.0
@@ -79,13 +79,13 @@ class TestRequestFechaPLPVariosServicos(TestCase):
         tag.remetente.numero_contrato.valor = '0123456789'
         tag.remetente.numero_diretoria.valor = 36
         tag.remetente.codigo_administrativo.valor = '12345678'
-        tag.remetente.nome.valor = u'Empresa Ltda'
-        tag.remetente.logradouro.valor = u'Avenida Central'
+        tag.remetente.nome.valor = 'Empresa Ltda'
+        tag.remetente.logradouro.valor = 'Avenida Central'
         tag.remetente.numero.valor = '2370'
-        tag.remetente.complemento.valor = u'sala 1205,12° andar'
+        tag.remetente.complemento.valor = 'sala 1205,12° andar'
         tag.remetente.bairro.valor = 'Centro'
         tag.remetente.cep.valor = '70002900'
-        tag.remetente.cidade.valor = u'Brasília'
+        tag.remetente.cidade.valor = 'Brasília'
         tag.remetente.uf.valor = 'PR'
         tag.remetente.telefone.valor = '6112345008'
         tag.remetente.email.valor = 'cli@mail.com.br'

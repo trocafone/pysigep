@@ -25,7 +25,7 @@
 #
 ###############################################################################
 
-import sigep_exceptions
+from . import sigep_exceptions
 
 
 class CampoBase(object):
@@ -50,7 +50,7 @@ class CampoBase(object):
 
     def get_xml(self):
         valor = self.valor if self.valor is not None else ''
-        return u'<{}>{}</{}>'.format(self.nome, valor, self.nome)
+        return '<{}>{}</{}>'.format(self.nome, valor, self.nome)
 
 
 class CampoString(CampoBase):
@@ -75,10 +75,10 @@ class CampoString(CampoBase):
         self._valor = val
 
     def _formata_valor(self, valor):
-        if not isinstance(valor, basestring):
+        if not isinstance(valor, str):
             raise sigep_exceptions.ErroTipoIncorreto(self.nome,
                                                      type(valor),
-                                                     basestring)
+                                                     str)
         return valor.rstrip()
 
     def validar(self, valor):
@@ -98,7 +98,7 @@ class CampoUnicode(CampoString):
 
     def get_xml(self):
         valor = self.valor if self.valor is not None else ''
-        return u'<{}><![CDATA[{}]]></{}>'.format(self.nome, valor, self.nome)
+        return '<{}><![CDATA[{}]]></{}>'.format(self.nome, valor, self.nome)
 
 
 class CampoCEP(CampoString):

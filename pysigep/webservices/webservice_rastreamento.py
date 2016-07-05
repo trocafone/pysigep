@@ -25,16 +25,14 @@
 #
 ###############################################################################
 
-import xml.etree.cElementTree as Et
-
-from webservice_base import WebserviceBase
+from .webservice_base import WebserviceBase
 
 
 class WebserviceRastreamento(WebserviceBase):
 
     def __init__(self):
         super(WebserviceRastreamento, self).__init__(
-            'http://websro.correios.com.br/sro_bin/sroii_xml.eventos')
+            'http://webservice.correios.com.br/service/rastro/Rastro.wsdl')
 
     def parse_error(self, xml):
         # Necessario pois o decode do rastreamento é diferente

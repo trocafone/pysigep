@@ -68,8 +68,8 @@ class TestRequestBaseAutentic(TestCase):
     def test_get_data(self):
 
         req = RequestBaseSIGEPAuthentication(ResponseBase, 'sigep', '12345')
-        xml = u'<usuario>%s</usuario>' % req.usuario.valor
-        xml += u'<senha>%s</senha>' % req.senha.valor
+        xml = '<usuario>%s</usuario>' % req.usuario.valor
+        xml += '<senha>%s</senha>' % req.senha.valor
 
         self.assertEqual(req.get_data(), xml)
 

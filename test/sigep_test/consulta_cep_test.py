@@ -71,10 +71,10 @@ class TestResponseBuscaCEP(TestCase):
         resp_cep = ResponseBuscaCEP()
         resp_cep._parse_xml(xml)
 
-        self.assertEqual(resp_cep.resposta['logradouro'], u'SBN Quadra 1 '
-                                                          u'Bloco A')
-        self.assertEqual(resp_cep.resposta['bairro'], u'Asa Norte')
-        self.assertEqual(resp_cep.resposta['cidade'], u'Brasília')
-        self.assertEqual(resp_cep.resposta['uf'], u'DF')
-        self.assertEqual(resp_cep.resposta['complemento'], u'')
-        self.assertEqual(resp_cep.resposta['complemento_2'], u'')
+        self.assertEqual(resp_cep.resposta['logradouro'], 'SBN Quadra 1 '
+                                                          'Bloco A')
+        self.assertEqual(resp_cep.resposta['bairro'], 'Asa Norte')
+        self.assertEqual(resp_cep.resposta['cidade'], 'Brasília')
+        self.assertEqual(resp_cep.resposta['uf'], 'DF')
+        self.assertEqual(resp_cep.resposta['complemento'], '')
+        self.assertEqual(resp_cep.resposta['complemento_2'], '')

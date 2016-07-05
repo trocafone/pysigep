@@ -103,7 +103,7 @@ class TestResponseRastreamento(TestCase):
         self.assertEqual(resp.resposta['versao'], '1.0')
         self.assertEqual(resp.resposta['qtd'], '2')
         self.assertEqual(resp.resposta['tipo_pesquisa'], 'Lista de Objetos')
-        self.assertEqual(resp.resposta['tipo_resultado'], u'Último evento')
+        self.assertEqual(resp.resposta['tipo_resultado'], 'Último evento')
 
         # Primeiro evendo
         obj = resp.resposta['objetos']['PJ382325976BR'][0]
@@ -112,7 +112,7 @@ class TestResponseRastreamento(TestCase):
         self.assertEqual(obj['status'], '01')
         self.assertEqual(obj['data'], '03/02/2016')
         self.assertEqual(obj['hora'], '17:57')
-        self.assertEqual(obj['descricao'], u'Objeto entregue ao destinatário')
+        self.assertEqual(obj['descricao'], 'Objeto entregue ao destinatário')
         self.assertEqual(obj['recebedor'], 'recebedor')
         self.assertEqual(obj['documento'], 'doc')
         self.assertEqual(obj['comentario'], 'comentario')
